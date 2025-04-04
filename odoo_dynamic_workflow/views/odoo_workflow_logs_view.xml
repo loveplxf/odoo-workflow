@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--##########################################################-->
+<!--###                 Disclaimer                         ###-->
+<!--##########################################################-->
+<!--### Lately, I started to get very busy after I         ###-->
+<!--### started my new position and I couldn't keep up     ###-->
+<!--### with clients demands & requests for customizations ###-->
+<!--### & upgrades, so I decided to publish this module    ###-->
+<!--### for community free of charge. Building on that,    ###-->
+<!--### I expect respect from whoever gets his/her hands   ###-->
+<!--### on my code, not to copy nor rebrand the module &   ###-->
+<!--### sell it under their names.                         ###-->
+<!--##########################################################-->
+
+<odoo>
+    <data>
+
+        <!--
+            Workflow Logs
+        -->
+        <record id="view_form_odoo_workflow_logs" model="ir.ui.view">
+            <field name="name">odoo.workflow.logs.form</field>
+            <field name="model">odoo.workflow.logs</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="Main Information">
+                                <field name="name"/>
+                                <field name="res_model"/>
+                                <field name="res_id"/>
+                                <field name="process"/>
+                                <field name="node_from"/>
+                                <field name="node_to"/>
+                                <field name="flow_start"/>
+                                <field name="flow_end"/>
+                                <field name="current"/>
+                                <field name="note"/>
+                            </group>
+                            <group string="Logs">
+                                <field name="create_uid"/>
+                                <field name="create_date"/>
+                                <field name="write_uid"/>
+                                <field name="write_date"/>
+                                <field name="start_datetime"/>
+                                <field name="end_datetime"/>
+                                <field name="process_datetime"/>
+                                <field name="duration" widget="float_time"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_odoo_workflow_logs" model="ir.ui.view">
+            <field name="name">odoo.workflow.logs.tree</field>
+            <field name="model">odoo.workflow.logs</field>
+            <field name="arch" type="xml">
+                <tree action="action_open_record" type="object" create="0" edit="0" import="0"
+                      decoration-warning="timeout_id != False" decoration-bf="is_read != True">
+                    <field name="timeout_id" column_invisible="True"/>
+                    <field name="is_read" column_invisible="True"/>
+                    <field name="res_model"/>
+                    <field name="name"/>
+                    <field name="current_state" widget="badge"
+                           decoration-success="current_state == ('done')"
+                           decoration-muted="current_state == ('draft')"
+                           decoration-warning="current_state == ('processing')"/>
+                    <field name="approve_user_ids" widget="many2many_tags"/>
+                    <field name="notice_user_ids" widget="many2many_tags"/>
+                    <field name="start_datetime" string="Receipt Time"/>
+                    <field name="duration" widget="float_time"/>
+                    <field name="process_user" string="Process User" widget="many2one_avatar_user"/>
+                    <field name="process" string="Process"/>
+                    <field name="process_datetime" string="Process Time"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_tree_odoo_workflow_logs_no_open" model="ir.ui.view">
+            <field name="name">odoo.workflow.logs.tree.no.open</field>
+            <field name="model">odoo.workflow.logs</field>
+            <field name="arch" type="xml">
+                <tree create="0" edit="0" import="0" delete="0" decoration-warning="timeout_id != False">
+                    <field name="timeout_id" column_invisible="True"/>
+                    <field name="node_to" string="Node"/>
+                    <field name="start_datetime" string="Receipt Time"/>
+                    <field name="process_user" string="Process User" widget="many2one_avatar_user"/>
+                    <field name="process" string="Process"/>
+                    <field name="process_datetime" string="Process Time"/>
+                    <field name="duration" widget="float_time"  sum="Sum Duration"/>
+                    <field name="approve_user_ids" widget="many2many_tags"/>
+                    <field name="notice_user_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_odoo_workflow_logs_search" model="ir.ui.view">
+            <field name="name">odoo.workflow.logs.search</field>
+            <field name="model">odoo.workflow.logs</field>
+            <field name="arch" type="xml">
+                <search string="Logs">
+                    <filter string="Pending" name="pending" domain="[('approve_user_ids', 'in', [uid]), ('current', '=', True)]"/>
+                    <filter string="Completed" name="completed" domain="[('process_user', '=', uid)]"/>
+                    <filter string="Initiate" name="initiate" domain="[('create_uid','=', uid), ('flow_start', '=', True)]"/>
+                    <filter string="Notice" name="notice" domain="[('notice_user_ids', 'in', [uid])]"/>
+                    <searchpanel class="account_root">
+                        <field name="workflow_id" icon="fa-filter" limit="0"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_odoo_workflow_logs_search_no_panel" model="ir.ui.view">
+            <field name="name">odoo.workflow.logs.search.no.panel</field>
+            <field name="model">odoo.workflow.logs</field>
+            <field name="arch" type="xml">
+                <search string="Logs">
+                    <filter string="Pending" name="pending" domain="[('approve_user_ids', 'in', [uid]), ('current', '=', True)]"/>
+                    <filter string="Completed" name="completed" domain="[('process_user', '=', uid)]"/>
+                    <filter string="Initiate" name="initiate" domain="[('create_uid','=', uid)]"/>
+                    <filter string="Notice" name="notice" domain="[('notice_user_ids', 'in', [uid])]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_odoo_workflow_logs" model="ir.actions.act_window">
+            <field name="name">Workflow Logs</field>
+            <field name="res_model">odoo.workflow.logs</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_odoo_workflow_logs_pending" model="ir.actions.act_window">
+            <field name="name">Pending</field>
+            <field name="res_model">odoo.workflow.logs</field>
+            <field name="context">{'search_default_pending': True}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="action_odoo_workflow_logs_completed" model="ir.actions.act_window">
+            <field name="name">Completed</field>
+            <field name="res_model">odoo.workflow.logs</field>
+            <field name="context">{'search_default_completed': True}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="action_odoo_workflow_logs_initiate" model="ir.actions.act_window">
+            <field name="name">Initiate</field>
+            <field name="res_model">odoo.workflow.logs</field>
+            <field name="context">{'search_default_initiate': True}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="action_odoo_workflow_logs_notice" model="ir.actions.act_window">
+            <field name="name">Notice</field>
+            <field name="res_model">odoo.workflow.logs</field>
+            <field name="context">{'search_default_notice': True}</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

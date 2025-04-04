@@ -1,0 +1,1070 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_dynamic_workflow
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20231221\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-10 06:29+0000\n"
+"PO-Revision-Date: 2024-10-10 17:59+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid "<span>Workflow Design</span>"
+msgstr "<span>流程设计</span>"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid ""
+"<strong>Note:</strong> Workflow engine can only alter normal models like\n"
+"                            crm.*, sale.*, hr.*, etc... (not transient like "
+"wizards nor abstract like reports)\n"
+"                            also resource (res.*) &amp; interface (ir.*) "
+"models are excluded from workflow engine."
+msgstr ""
+"<strong>注意：</strong>工作流引擎只能更改正常模型，如\n"
+"                            crm.*、sale.*、hr.* 等...（不能更改像向导这样的"
+"瞬态模型，也不能更改像报告这样的抽象模型）\n"
+"                            资源 (res.*) 和接口 (ir.*) 模型也不在工作流引擎"
+"的修改范围内。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__action_type
+msgid "Action Type"
+msgstr "动作类型"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node_button
+msgid "Actions"
+msgstr "动作"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__current
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__active
+msgid "Active"
+msgstr "激活"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__all
+msgid "All"
+msgstr "所有人"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__is_forward
+msgid "Allow Forward"
+msgstr "可否转发"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node
+msgid "Approve"
+msgstr "审批"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__approve_type
+msgid "Approve Type"
+msgstr "审批类型"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__approve_user_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__approve_user_ids
+msgid "Approve Users"
+msgstr "处理用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__approve_users_field_id
+msgid "Approve Users Field"
+msgstr "处理用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__sequence
+msgid "Arrange buttons by defining sequence."
+msgstr "通过定义顺序来排列按钮。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__sequence
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_timeout__sequence
+msgid "Arrange node by defining sequence."
+msgstr "通过定义序列来排列节点。"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node_field
+msgid "Attributes"
+msgstr "属性"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__bg_color
+msgid "Background Color"
+msgstr "背景色"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__btn_key
+msgid "Button Key"
+msgstr "按钮键"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__name
+msgid "Button String"
+msgstr "名称"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__button_ids
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node
+msgid "Buttons"
+msgstr "按钮"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.odoo_workflow_optional_view_form
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid "Cancel"
+msgstr "取消"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_logs__flow_end
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__flow_end
+msgid "Check it if this node is the ending node."
+msgstr "如果该节点是结束节点，则选中它。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_logs__flow_start
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__flow_start
+msgid "Check it if this node is the starting node."
+msgstr "如果该节点是起始节点，则选中它。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__action_type
+msgid "Choose type of action to be trigger by the button."
+msgstr "选择要由按钮触发的动作类型。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__approve_type
+msgid "Choose type of approve."
+msgstr "选择审批类型。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__notice_type
+msgid "Choose type of notice."
+msgstr "选择通知类型。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.actions.act_window,name:odoo_dynamic_workflow.action_odoo_workflow_logs_completed
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search_no_panel
+msgid "Completed"
+msgstr "已办"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_link
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node_button
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_timeout
+msgid "Condition"
+msgstr "条件"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__condition_code
+msgid "Condition Code"
+msgstr "条件代码"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.odoo_workflow_optional_view_form
+msgid "Confirm"
+msgstr "确定"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__is_highlight
+msgid "Control highlighting of the button if needs user attention.."
+msgstr "如果需要用户注意，请控制按钮的高亮显示。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__create_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__create_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__current_state
+msgid "Current State"
+msgstr "当前阶段"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__approve_department_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__notice_department_ids
+msgid "Departments"
+msgstr "部门"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__node_to
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__node_to
+msgid "Destination Node"
+msgstr "目标节点"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__display_name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_logs__current_state__done
+msgid "Done"
+msgstr "已完成"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_logs__current_state__draft
+msgid "Draft"
+msgstr "草稿"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__duration
+msgid "Duration"
+msgstr "时长"
+
+#. module: odoo_dynamic_workflow
+#. odoo-javascript
+#: code:addons/odoo_dynamic_workflow/static/src/statusbar_duration_workflow/statusbar_duration_field.js:0
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__duration_tracking_field_id
+#, python-format
+msgid "Duration Tracking Field"
+msgstr "处理时长"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__has_icon
+msgid "Enable it to add icon to the button."
+msgstr "启用它可以将图标添加到按钮中。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__end_datetime
+msgid "End Time"
+msgstr "结束时间"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow__model_id
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__model_id
+msgid "Enter business model you would like to modify its workflow."
+msgstr "输入要修改其工作流的业务模型。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__name
+msgid "Enter button string name that will appear in the view."
+msgstr "输入将显示在视图中的按钮字符串名称。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__condition_code
+msgid "Enter condition to execute button action."
+msgstr "输入执行按钮操作的条件。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_link__link_after
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_link__link_before
+msgid "Enter condition to pass thru this link."
+msgstr "输入通过此链接的条件。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__expression
+msgid "Enter expression to display button."
+msgstr "输入表达式以显示按钮。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_link__expression
+msgid "Enter expression to display button. eg: status == 'EQ'"
+msgstr "输入表达式以显示按钮。例：status == 'EQ'"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_link__name
+msgid "Enter friendly link name that describe the process."
+msgstr "输入描述过程的链接名称。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node_button__icon
+msgid ""
+"Enter icon name like: fa-print, it's recommended to use FontAwesome Icons."
+msgstr "输入图标名称，如：fa print，建议使用FontAwesome Icons。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_node__name
+msgid "Enter string name of the node."
+msgstr "输入节点的字符串名称。"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node_button
+msgid "Execute Condition"
+msgstr "执行条件"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__expression
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__approve_expression
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__notice_expression
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__expression
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__expression
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__expression
+msgid "Expression"
+msgstr "表达式"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__field_id
+msgid "Field"
+msgstr "字段"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_ir_model_fields
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__field_ids
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node
+msgid "Fields"
+msgstr "字段"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__flow_end
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__flow_end
+msgid "Flow End"
+msgstr "流程结束"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__flow_start
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__flow_start
+msgid "Flow Start"
+msgstr "流程开始"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__is_fold
+msgid "Folded in Statusbar"
+msgstr "是否折叠"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/wizard/odoo_workflow_optional.py:0
+#, python-format
+msgid "Forward"
+msgstr "转发"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__fg_color
+msgid "Front Color"
+msgstr "前景色"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow__name
+msgid "Give workflow a name."
+msgstr "为工作流命名。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__approve_group_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__notice_group_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__group_ids
+msgid "Groups"
+msgstr "群组"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__has_icon
+msgid "Has Icon"
+msgstr "是否设置图标"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__id
+msgid "ID"
+msgstr ""
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__icon
+msgid "Icon"
+msgstr "图标"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,help:odoo_dynamic_workflow.field_odoo_workflow_logs__note
+msgid "If you want record something for this link, write here"
+msgstr "如果你想记录一些备注，请在此填写"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__in_link_ids
+msgid "Incoming Transitions"
+msgstr "传入转换"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__inherit_view_id
+msgid "Inherit View"
+msgstr "继承视图"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.actions.act_window,name:odoo_dynamic_workflow.action_odoo_workflow_logs_initiate
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search_no_panel
+msgid "Initiate"
+msgstr "发起"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__initiator
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__initiator
+msgid "Initiator"
+msgstr "发起人本人"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__invisible
+msgid "Invisible"
+msgstr "隐藏"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__is_approve
+msgid "Is Approve"
+msgstr "审批"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__is_forward
+msgid "Is Forward"
+msgstr "是否转发"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__is_highlight
+msgid "Is Highlighted"
+msgstr "是否高亮显示"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__is_notice
+msgid "Is Notice"
+msgstr "通知"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__approve_job_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__notice_job_ids
+msgid "Jobs"
+msgstr "岗位"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__write_uid
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__write_date
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_link
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__link_id
+msgid "Link"
+msgstr "链接"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_link
+msgid "Link After"
+msgstr "执行后"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__link_after
+msgid "Link After Code"
+msgstr "代码"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_link
+msgid "Link Before"
+msgstr "执行前"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__link_before
+msgid "Link Before Code"
+msgstr "代码"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__link_ids
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid "Links"
+msgstr "链接"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node
+msgid "Load Model Fields"
+msgstr "加载字段"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search_no_panel
+msgid "Logs"
+msgstr "日志"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node_field
+msgid "Main Information"
+msgstr "主信息"
+
+#. module: odoo_dynamic_workflow
+#: model:res.groups,name:odoo_dynamic_workflow.group_workflow_manager
+msgid "Manager"
+msgstr "管理者"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__model_id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__res_model
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__model_id
+msgid "Model"
+msgstr "模型"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__model_id
+msgid "Model Ref"
+msgstr "模型"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow.py:0
+#, python-format
+msgid "Model must be unique."
+msgstr "模型必须唯一。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__name
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__name
+msgid "Name"
+msgstr "名称"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_node
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs_no_open
+msgid "Node"
+msgstr "节点"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__node_id
+msgid "Node Ref"
+msgstr "节点"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__node_ids
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid "Nodes"
+msgstr "节点"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__none
+msgid "None"
+msgstr "无"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__note
+msgid "Note"
+msgstr "备注"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.actions.act_window,name:odoo_dynamic_workflow.action_odoo_workflow_logs_notice
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_timeout
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search_no_panel
+msgid "Notice"
+msgstr "通知"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__notice_type
+msgid "Notice Type"
+msgstr "通知类型"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__notice_user_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_optional__notice_user_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__notice_user_ids
+msgid "Notice Users"
+msgstr "通知用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__notice_users_field_id
+msgid "Notice Users Field"
+msgstr "通知用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_node_button
+msgid "Odoo Workflow Node Buttons"
+msgstr "按钮"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_node_field
+msgid "Odoo Workflow Node Fields"
+msgstr "字段"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_timeout
+msgid "Odoo Workflow Timeout"
+msgstr "按钮"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__optional
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__optional
+msgid "Optional"
+msgstr "发起人自选"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__out_link_ids
+msgid "Outgoing Transitions"
+msgstr "传出转换"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.actions.act_window,name:odoo_dynamic_workflow.action_odoo_workflow_logs_pending
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_odoo_workflow_logs_search_no_panel
+msgid "Pending"
+msgstr "待办"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__process
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs_no_open
+msgid "Process"
+msgstr "操作"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__process_datetime
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs_no_open
+msgid "Process Time"
+msgstr "操作时间"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__process_user
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs_no_open
+msgid "Process User"
+msgstr "操作人"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_logs__current_state__processing
+msgid "Processing"
+msgstr "处理中"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__code
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node_button__action_type__code
+msgid "Python Code"
+msgstr "Python代码"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__readonly
+msgid "Readonly"
+msgstr "只读"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs_no_open
+msgid "Receipt Time"
+msgstr "接收时间"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_field__required
+msgid "Required"
+msgstr "必输"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__res_id
+msgid "Resource ID"
+msgstr "来源ID"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__res_model
+msgid "Resource Model"
+msgstr "来源模型"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__name
+msgid "Resource Name"
+msgstr "记录"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__sequence
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__sequence
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__sequence
+msgid "Sequence"
+msgstr "序列"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__server_action_id
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node_button__action_type__action
+msgid "Server Action"
+msgstr "服务器动作"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow_link.py:0
+#, python-format
+msgid "Sorry, source & destination nodes can't be the same."
+msgstr "抱歉，来源和目标不能是同一个节点。"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__node_from
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__node_from
+msgid "Source Node"
+msgstr "来源节点"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__departments
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__departments
+msgid "Specify Departments"
+msgstr "指定部门"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__groups
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__groups
+msgid "Specify Groups"
+msgstr "指定群组"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__jobs
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__jobs
+msgid "Specify Jobs"
+msgstr "指定岗位"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__users
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__users
+msgid "Specify Users"
+msgstr "指定用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__stage_field_id
+msgid "Stage Field"
+msgstr "Stage字段"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__start_datetime
+msgid "Start Time"
+msgstr "开始时间"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__d_position
+msgid "Store Position"
+msgstr "存储地点"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_tree_odoo_workflow_logs_no_open
+msgid "Sum Duration"
+msgstr "合计时长"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__approve_type__superior
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node__notice_type__superior
+msgid "Superior"
+msgstr "N+1领导"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__timeout_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__timeout_id
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid "Timeout"
+msgstr "超时"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__timeout_duration
+msgid "Timeout Duration"
+msgstr "超时时长"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__node_ids
+msgid "Timeout Nodes"
+msgstr "累计节点"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node_button__action_type__link
+msgid "Trigger Link"
+msgstr "触发链接"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow.py:0
+#, python-format
+msgid "Unable to delete records. Please first cancel the workflow deployment."
+msgstr "不能删除记录，请先取消工作流部署。"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow
+msgid "Update"
+msgstr "更新"
+
+#. module: odoo_dynamic_workflow
+#: model:res.groups,name:odoo_dynamic_workflow.group_workflow_user
+msgid "User"
+msgstr "用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__approve_user_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__notice_user_ids
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__user_ids
+msgid "Users"
+msgstr "用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow__view_id
+msgid "View"
+msgstr "视图"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_link
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node_button
+msgid "Visible Condition"
+msgstr "显示条件"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__win_act_id
+#: model:ir.model.fields.selection,name:odoo_dynamic_workflow.selection__odoo_workflow_node_button__action_type__win_act
+msgid "Window Action"
+msgstr "客户端操作"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow
+#: model:ir.module.category,name:odoo_dynamic_workflow.module_category_workflow
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_root
+msgid "Workflow"
+msgstr "流程"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.actions.act_window,name:odoo_dynamic_workflow.action_odoo_workflow_design
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_design
+msgid "Workflow Design"
+msgstr "流程设计"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_diagram_odoo_workflow
+msgid "Workflow Editor"
+msgstr "流程编辑者"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/base.py:0
+#: model:ir.actions.act_window,name:odoo_dynamic_workflow.action_odoo_workflow_logs
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_logs
+#, python-format
+msgid "Workflow Logs"
+msgstr "流程日志"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_logs_completed
+msgid "Workflow Logs Completed"
+msgstr "已办"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_logs_initiate
+msgid "Workflow Logs Initiate"
+msgstr "发起"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_logs_notice
+msgid "Workflow Logs Notice"
+msgstr "抄送"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.ui.menu,name:odoo_dynamic_workflow.menu_odoo_workflow_logs_pending
+msgid "Workflow Logs Pending"
+msgstr "待办"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__node_id
+msgid "Workflow Node Ref"
+msgstr "流程节点"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow_node.py:0
+#: model:ir.model,name:odoo_dynamic_workflow.model_odoo_workflow_optional
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.odoo_workflow_optional_view_form
+#, python-format
+msgid "Workflow Optional"
+msgstr "自选用户"
+
+#. module: odoo_dynamic_workflow
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_link__workflow_id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_logs__workflow_id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node__workflow_id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_node_button__workflow_id
+#: model:ir.model.fields,field_description:odoo_dynamic_workflow.field_odoo_workflow_timeout__workflow_id
+msgid "Workflow Ref"
+msgstr "流程"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow.py:0
+#, python-format
+msgid "Workflow must have only one start node."
+msgstr "工作流必须只有一个开始节点。"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow.py:0
+#, python-format
+msgid "Workflow name must be unique."
+msgstr "工作流名称必须唯一。"
+
+#. module: odoo_dynamic_workflow
+#. odoo-python
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow_link.py:0
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow_node.py:0
+#: code:addons/odoo_dynamic_workflow/models/odoo_workflow_node_button.py:0
+#, python-format
+msgid ""
+"Wrong python code defined.\n"
+"\n"
+"Error: %s\n"
+"Line: %s, Column: %s\n"
+"\n"
+"%s"
+msgstr ""
+"错误的Python代码定义。\n"
+"\n"
+"错误： %s\n"
+"行： %s， 列： %s\n"
+"\n"
+"%s"
+
+#. module: odoo_dynamic_workflow
+#: model_terms:ir.ui.view,arch_db:odoo_dynamic_workflow.view_form_odoo_workflow_node
+msgid "ex. 'Draft' or 'Direct Manager'"
+msgstr "例：草稿或者上级经理"
+
+#~ msgid "Appear in Statusbar"
+#~ msgstr "显示"
+
+#, fuzzy
+#~| msgid "Control visiability of the node/state in view."
+#~ msgid "Control visibility of the node/state in view."
+#~ msgstr "控制视图中节点/状态的可见性。"
+
+#~ msgid "Workflow Optional Setting"
+#~ msgstr "自选用户"
+
+#~ msgid "Form Field"
+#~ msgstr "表单字段"
+
+#~ msgid "Notice Groups"
+#~ msgstr "群组"
+
+#~ msgid "Generated technical name which used by backend code."
+#~ msgstr "生成后端代码使用的技术名称。"
+
+#~ msgid "Technical Name"
+#~ msgstr "技术名称"
+
+#~ msgid "ex. 'draft' or 'direct_manager'"
+#~ msgstr "例：草稿或者上级经理"
+
+#~ msgid "Parent"
+#~ msgstr "直接上级"
+
+#~ msgid "<span class=\"o_stat_text\">Flow Design</span>"
+#~ msgstr "<span class=\"o_stat_text\">流程设计</span>"
+
+#~ msgid "<span>Buttons</span>"
+#~ msgstr "<span>按钮</span>"
+
+#~ msgid "<span>Links</span>"
+#~ msgstr "<span>链接</span>"
+
+#~ msgid "<span>Nodes</span>"
+#~ msgstr "<span>节点</span>"
+
+#~ msgid "Ingoing Links"
+#~ msgstr "传入链接"
+
+#~ msgid "Outgoing Links"
+#~ msgstr "传出链接"
+
+#~ msgid "Domain"
+#~ msgstr "表达式"
+
+#~ msgid ""
+#~ "After creating or modifying any workflow, you have to update system in "
+#~ "order to allow it to use new updates."
+#~ msgstr "创建或修改任何工作流程后，都必须更新系统，以便让它使用新的更新。"
+
+#~ msgid "Hide Button if Condition isn't fulfilled"
+#~ msgstr "如果条件未满足，则隐藏按钮"
+
+#~ msgid "If condition is false the button will be hidden."
+#~ msgstr "如果条件为false，按钮将被隐藏。"
+
+#~ msgid ""
+#~ "In this case you can't use 'obj' variable because the code will be "
+#~ "populated on whole view."
+#~ msgstr "在这种情况下，您不能使用“obj”变量，因为代码将在整个视图中填充。"
+
+#~ msgid "Reason"
+#~ msgstr "原因"
+
+#, python-format
+#~ msgid "Reason of refusal is '%s'"
+#~ msgstr "拒绝原因是 '%s'"
+
+#~ msgid "Refusal Reason"
+#~ msgstr "拒绝原因"
+
+#~ msgid "Refusal Reason Wizard"
+#~ msgstr "拒绝原因向导"
+
+#~ msgid "Submit"
+#~ msgstr "提交"
+
+#~ msgid "Update Workflows"
+#~ msgstr "更新工作流"
+
+#~ msgid "Workflow Refuse Wizard"
+#~ msgstr "工作流拒绝向导"
+
+#~ msgid "Workflow Update Wizard"
+#~ msgstr "工作流更新向导"
+
+#, python-format
+#~ msgid "Wrong python condition defined."
+#~ msgstr "错误的Python条件定义。"
+
+#~ msgid "or"
+#~ msgstr "或"

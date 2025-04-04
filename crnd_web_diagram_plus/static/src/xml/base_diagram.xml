@@ -1,0 +1,29 @@
+<template>
+
+    <t t-name="DiagramPlusView">
+        <div class="o_diagram_plus"/>
+    </t>
+
+    <t t-name="DiagramPlusView.buttons">
+        <button type="button" class="btn btn-primary o_diagram_plus_new_button" t-on-click="_addNode" t-if="active_create">
+            New Node
+        </button>
+        <button t-if="!auto_layout" type="button" class="btn btn-secondary o_diagram_plus_auto_layout" t-on-click="_autoLayout">
+            Auto Layout
+        </button>
+    </t>
+
+    <t t-name="DiagramPlusView.Controller">
+        <div t-att-class="props.className" t-ref="root">
+            <Layout className="model.useSampleModel ? 'o_view_sample_data' : ''" display="props.display">
+                <t t-set-slot="layout-buttons">
+                    <t t-call="DiagramPlusView.buttons" t-if="!model.diagram_readonly">
+                        <t t-set="active_create" t-value="model.active_actions.create"/>
+                        <t t-set="auto_layout" t-value="model.auto_layout"/>
+                    </t>
+                </t>
+                <t t-component='props.Renderer' model='model' t-key='state.uuid'/>
+            </Layout>
+        </div>
+    </t>
+</template>

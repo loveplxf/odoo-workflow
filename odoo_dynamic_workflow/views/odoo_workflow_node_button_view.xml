@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--##########################################################-->
+<!--###                 Disclaimer                         ###-->
+<!--##########################################################-->
+<!--### Lately, I started to get very busy after I         ###-->
+<!--### started my new position and I couldn't keep up     ###-->
+<!--### with clients demands & requests for customizations ###-->
+<!--### & upgrades, so I decided to publish this module    ###-->
+<!--### for community free of charge. Building on that,    ###-->
+<!--### I expect respect from whoever gets his/her hands   ###-->
+<!--### on my code, not to copy nor rebrand the module &   ###-->
+<!--### sell it under their names.                         ###-->
+<!--##########################################################-->
+
+<odoo>
+    <data>
+
+        <!--
+            Workflow Node Buttons
+        -->
+        <record id="view_form_odoo_workflow_node_button" model="ir.ui.view">
+            <field name="name">odoo.workflow.node.button.form</field>
+            <field name="model">odoo.workflow.node.button</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="workflow_id" invisible="1"/>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="sequence" required="1"/>
+                            </group>
+                            <group>
+                                <field name="node_id"
+                                       domain="[('workflow_id','=',workflow_id)]"/>
+                                <field name="is_highlight"/>
+                                <field name="is_forward"/>
+                                <field name="has_icon"/>
+                                <field name="icon" invisible="not has_icon" required="has_icon"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Actions">
+                                <group>
+                                    <field name="action_type" required="1"/>
+                                </group>
+                                <group name="link" invisible="action_type != 'link'">
+                                    <field name="link_id"
+                                           domain="[('node_from','=',node_id)]"
+                                           required="action_type == 'link'"/>
+                                </group>
+                                <group name="code" invisible="action_type != 'code'">
+                                    <field name="code" widget="code" options="{'mode': 'python'}"
+                                           required="action_type == 'code'"/>
+                                </group>
+                                <group name="action" invisible="action_type != 'action'">
+                                    <field name="server_action_id"
+                                           context="{'default_is_workflow':True}"
+                                           required="action_type == 'action'"/>
+                                </group>
+                                <group name="win_action" invisible="action_type != 'win_act'">
+                                    <field name="win_act_id" required="action_type == 'win_act'"/>
+                                </group>
+                            </page>
+                            <page string="Condition">
+                                <group string="Visible Condition">
+                                    <field name="group_ids" widget="many2many_tags"/>
+                                    <field name="user_ids" widget="many2many_tags"/>
+                                    <field name="expression" widget="code" options="{'mode': 'python'}"/>
+                                </group>
+                                <group string="Execute Condition">
+                                    <field name="condition_code" required="1" widget="code"
+                                           options="{'mode': 'python'}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_odoo_workflow_node_button" model="ir.ui.view">
+            <field name="name">odoo.workflow.node.button.tree</field>
+            <field name="model">odoo.workflow.node.button</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="action_type"/>
+                    <field name="is_highlight"/>
+                    <field name="is_forward" column_invisible="True"/>
+                    <field name="code" column_invisible="True"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

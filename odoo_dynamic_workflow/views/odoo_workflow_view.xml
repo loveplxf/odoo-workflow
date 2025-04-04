@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--##########################################################-->
+<!--###                 Disclaimer                         ###-->
+<!--##########################################################-->
+<!--### Lately, I started to get very busy after I         ###-->
+<!--### started my new position and I couldn't keep up     ###-->
+<!--### with clients demands & requests for customizations ###-->
+<!--### & upgrades, so I decided to publish this module    ###-->
+<!--### for community free of charge. Building on that,    ###-->
+<!--### I expect respect from whoever gets his/her hands   ###-->
+<!--### on my code, not to copy nor rebrand the module &   ###-->
+<!--### sell it under their names.                         ###-->
+<!--##########################################################-->
+
+<odoo>
+    <data>
+
+        <!--
+            Workflow
+        -->
+        <record id="view_form_odoo_workflow" model="ir.ui.view">
+            <field name="name">odoo.workflow.form</field>
+            <field name="model">odoo.workflow</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="btn_reload_workflow"
+                                string="Update" type="object"
+                                class="oe_highlight" icon="fa-refresh"/>
+                        <button name="btn_cancel_workflow" invisible="inherit_view_id == False"
+                                string="Cancel" type="object"
+                                class="oe_highlight" icon="fa-reply"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_odoo_workflow_diagram" type="object"
+                                    class="oe_stat_button" icon="fa-code-fork">
+                                <span>Workflow Design</span>
+                            </button>
+                        </div>
+                        <div class="alert alert-danger oe_edit_only" role="alert">
+                            <strong>Note:</strong> Workflow engine can only alter normal models like
+                            crm.*, sale.*, hr.*, etc... (not transient like wizards nor abstract like reports)
+                            also resource (res.*) &amp; interface (ir.*) models are excluded from workflow engine.
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="model_id" required="1"/>
+                                <field name="res_model" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="view_id" required="1" domain="[('model', '=', res_model), ('type', '=', 'form')]"/>
+                                <field name="inherit_view_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Nodes">
+                                <field name="node_ids" context="{'default_workflow_id':id}"/>
+                            </page>
+                            <page string="Links">
+                                <field name="link_ids" context="{'default_workflow_id':id}"/>
+                            </page>
+                            <page string="Timeout">
+                                <field name="timeout_ids" context="{'default_workflow_id':id}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_odoo_workflow" model="ir.ui.view">
+            <field name="name">odoo.workflow.tree</field>
+            <field name="model">odoo.workflow</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="model_id"/>
+                    <field name="view_id"/>
+                    <field name="inherit_view_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_diagram_odoo_workflow" model="ir.ui.view">
+            <field name="name">odoo.workflow.diagram</field>
+            <field name="model">odoo.workflow</field>
+            <field name="arch" type="xml">
+                <diagram_plus string="Workflow Editor" auto_layout="false">
+                    <node object="odoo.workflow.node"
+                          bgcolor="gray:flow_start==True;grey:flow_end==True"
+                          bg_color_field="bg_color"
+                          fg_color_field="fg_color"
+                          d_position_field="d_position">
+                    </node>
+                    <arrow object="odoo.workflow.link"
+                           source="node_from"
+                           destination="node_to"
+                           label="['name']">
+                    </arrow>
+                </diagram_plus>
+            </field>
+        </record>
+
+        <record id="action_odoo_workflow_design" model="ir.actions.act_window">
+            <field name="name">Workflow Design</field>
+            <field name="res_model">odoo.workflow</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--##########################################################-->
+<!--###                 Disclaimer                         ###-->
+<!--##########################################################-->
+<!--### Lately, I started to get very busy after I         ###-->
+<!--### started my new position and I couldn't keep up     ###-->
+<!--### with clients demands & requests for customizations ###-->
+<!--### & upgrades, so I decided to publish this module    ###-->
+<!--### for community free of charge. Building on that,    ###-->
+<!--### I expect respect from whoever gets his/her hands   ###-->
+<!--### on my code, not to copy nor rebrand the module &   ###-->
+<!--### sell it under their names.                         ###-->
+<!--##########################################################-->
+
+<odoo>
+    <data>
+
+        <!--
+            Workflow Nodes
+        -->
+        <record id="view_form_odoo_workflow_node" model="ir.ui.view">
+            <field name="name">odoo.workflow.node.form</field>
+            <field name="model">odoo.workflow.node</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <field name="workflow_id" invisible="1"/>
+                        <field name="model_id" invisible="1"/>
+                        <group>
+                            <group>
+                                <field name="name" placeholder="ex. 'Draft' or 'Direct Manager'" required="1"/>
+                                <field name="sequence" required="1"/>
+                                <field name="flow_start"/>
+                                <field name="flow_end"/>
+                            </group>
+                            <group>
+                                <field name="is_fold"/>
+                                <field name="is_forward"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Approve" invisible="flow_start">
+                                <group>
+                                    <group>
+                                        <field name="approve_type" required="1" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="approve_user_ids" widget="many2many_tags" invisible="approve_type != 'users'"/>
+                                        <field name="approve_group_ids" widget="many2many_tags" invisible="approve_type != 'groups'"/>
+                                        <field name="approve_job_ids" widget="many2many_tags" invisible="approve_type != 'jobs'"/>
+                                        <field name="approve_department_ids" widget="many2many_tags" invisible="approve_type != 'departments'"/>
+                                        <field name="approve_expression" widget="code" string="" invisible="approve_type != 'expression'"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Notice" invisible="flow_start">
+                                <group>
+                                    <group>
+                                        <field name="notice_type" required="1" widget="radio"/>
+                                    </group>
+                                    <group>
+                                        <field name="notice_user_ids" widget="many2many_tags" invisible="notice_type != 'users'"/>
+                                        <field name="notice_group_ids" widget="many2many_tags" invisible="notice_type != 'groups'"/>
+                                        <field name="notice_job_ids" widget="many2many_tags" invisible="notice_type != 'jobs'"/>
+                                        <field name="notice_department_ids" widget="many2many_tags" invisible="notice_type != 'departments'"/>
+                                        <field name="notice_expression" widget="code" string="" invisible="notice_type != 'expression'"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Fields">
+                                <button name="btn_load_fields" string="Load Model Fields"
+                                        type="object" class="oe_highlight"/>
+                                <field name="field_ids" context="{'default_model_id':model_id}"/>
+                            </page>
+                            <page string="Buttons">
+                                <field name="button_ids" context="{'default_node_id':id}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_odoo_workflow_node" model="ir.ui.view">
+            <field name="name">odoo.workflow.node.tree</field>
+            <field name="model">odoo.workflow.node</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="sequence" widget="handle"/>
+                    <field name="name"/>
+                    <field name="flow_start"/>
+                    <field name="flow_end"/>
+                    <field name="approve_type"/>
+                    <field name="notice_type"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--##########################################################-->
+<!--###                 Disclaimer                         ###-->
+<!--##########################################################-->
+<!--### Lately, I started to get very busy after I         ###-->
+<!--### started my new position and I couldn't keep up     ###-->
+<!--### with clients demands & requests for customizations ###-->
+<!--### & upgrades, so I decided to publish this module    ###-->
+<!--### for community free of charge. Building on that,    ###-->
+<!--### I expect respect from whoever gets his/her hands   ###-->
+<!--### on my code, not to copy nor rebrand the module &   ###-->
+<!--### sell it under their names.                         ###-->
+<!--##########################################################-->
+
+<odoo>
+    <data>
+
+        <!--
+            Workflow Nodes Fields
+        -->
+        <record id="view_form_odoo_workflow_node_field" model="ir.ui.view">
+            <field name="name">odoo.workflow.node.field.form</field>
+            <field name="model">odoo.workflow.node.field</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group string="Main Information">
+                                <field name="model_id"/>
+                                <field name="field_id" required="1" domain="[('model_id','=',model_id)]"/>
+                            </group>
+                            <group string="Attributes">
+                                <field name="readonly"/>
+                                <field name="required"/>
+                                <field name="invisible"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_tree_odoo_workflow_node_field" model="ir.ui.view">
+            <field name="name">odoo.workflow.node.field.tree</field>
+            <field name="model">odoo.workflow.node.field</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="model_id"/>
+                    <field name="field_id" required="1" domain="[('model_id','=',model_id)]"/>
+                    <field name="readonly"/>
+                    <field name="required"/>
+                    <field name="invisible"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>
